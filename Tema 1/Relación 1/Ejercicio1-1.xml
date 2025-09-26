@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+<libros>
+    <libro>
+        <titulo>Titulo1</titulo>
+        <autor>Autor1</autor>
+        <anio>anio</anio>
+        <editorial>editorial1</editorial>
+    </libro>
+    <libro>
+        <titulo>Titulo2</titulo>
+        <autor>Autor2</autor>
+        <anio>anio</anio>
+        <editorial>editorial2</editorial>
+    </libro>
+    <libro>
+        <titulo>Titulo3</titulo>
+        <autor>Autor3</autor>
+        <anio>anio</anio>
+        <editorial>editorial3</editorial>
+    </libro>
+</libros>
+</biblioteca>  

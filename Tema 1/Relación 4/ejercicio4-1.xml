@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio4-1.xsd">
+    <libro>
+        <titulo>Cien años de soledad</titulo>
+        <autor>Gabriel García Márquez</autor>
+        <anioPublicacion>1967</anioPublicacion>
+        <genero>Novela</genero>
+        <isbn>978-06-0883-286-7</isbn>
+    </libro>
+    <libro>
+        <titulo>1984</titulo>
+        <autor>George Orwell</autor>
+        <anioPublicacion>1949</anioPublicacion>
+        <genero>Ciencia ficción política</genero>
+        <isbn>978-02-5698-298-6</isbn>
+    </libro>
+    <libro>
+        <titulo>Orgullo y prejuicio</titulo>
+        <autor>Jane Austen</autor>
+        <anioPublicacion>1813</anioPublicacion>
+        <genero>Novela romántica</genero>
+        <isbn>978-04-4628-952-4</isbn>
+    </libro>
+</biblioteca>

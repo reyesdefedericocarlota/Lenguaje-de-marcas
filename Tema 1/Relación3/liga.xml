@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE liga SYSTEM "liga.dtd">
+<liga>
+    <entrenador>
+        <nombre>ash</nombre>
+        <pokemon>
+            <nombre>charmander</nombre>
+            <tipo>fuego</tipo>
+            <nivel>15</nivel>
+        </pokemon>
+        <pokemon>
+            <nombre>bulbasur</nombre>
+            <tipo>planta</tipo>
+            <tipo>veneno</tipo>
+            <nivel>20</nivel>
+        </pokemon>
+    </entrenador>
+    <entrenador>
+        <nombre>aura</nombre>
+        <pokemon>
+            <nombre>eeve</nombre>
+            <tipo>normal</tipo>
+            <nivel>18</nivel>
+        </pokemon>
+        <pokemon>
+            <nombre>onix</nombre>
+            <tipo>roca</tipo>
+            <tipo>tierra</tipo>
+            <nivel>22</nivel>
+        </pokemon>
+    </entrenador>   
+</liga>

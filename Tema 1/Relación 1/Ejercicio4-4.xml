@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recetario>
+    <receta>
+        <nombre>Tortilla de patatas</nombre>
+        <ingredientes>
+            <ingrediente>
+                <nombre>huevos</nombre>
+                <cantidad>4</cantidad>
+            </ingrediente>
+            <ingrediente>
+                <nombre>patatas</nombre>
+                <cantidad>6</cantidad>
+            </ingrediente>
+        </ingredientes>
+        <tiempopreparacion>1h30min</tiempopreparacion>
+    </receta>
+    <receta>
+        <nombre>Macarrones boloñesa</nombre>
+        <ingredientes>
+            <ingrediente>
+                <nombre>Macarrones</nombre>
+                <cantidad>200g</cantidad>
+            </ingrediente>
+            <ingrediente>
+                <nombre>Salsa de tomate</nombre>
+                <cantidad>50g</cantidad>
+            </ingrediente>
+            <ingrediente>
+                <nombre>Carne picada</nombre>
+                <cantidad>60g</cantidad>
+            </ingrediente>
+        </ingredientes>
+        <tiempopreparacion>30min</tiempopreparacion>
+    </receta>
+</recetario>

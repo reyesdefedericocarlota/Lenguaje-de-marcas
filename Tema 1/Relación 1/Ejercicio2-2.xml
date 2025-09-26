@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos>
+    <alumno>
+        <nombre>Carlota</nombre>
+        <apellido>Reyes de Federico</apellido>
+        <edad>22</edad>
+        <email>carlota.reyesdefed@gmail.com</email>
+    </alumno>
+    <alumno>
+        <nombre>Jose</nombre>
+        <apellido>Padilla</apellido>
+        <edad>22</edad>
+        <email>josepadilla@gmail.com</email>
+    </alumno>
+</alumnos>

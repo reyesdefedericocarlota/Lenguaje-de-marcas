@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE equipo [
+    <!ELEMENT equipo (pokemon+)>
+    <!ELEMENT pokemon (nombre, tipo+, nivel)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT tipo (#PCDATA)>
+    <!ELEMENT nivel (#PCDATA)>
+]>
+<equipo>
+    <pokemon>
+        <nombre>charmander</nombre>
+        <tipo>fuego</tipo>
+        <nivel>15</nivel>
+    </pokemon>
+    <pokemon>
+        <nombre>bulbasur</nombre>
+        <tipo>planta</tipo>
+        <tipo>veneno</tipo>
+        <nivel>20</nivel>
+    </pokemon>
+    <pokemon>
+        <nombre>gyarados</nombre>
+        <tipo>agua</tipo>
+        <tipo>volador</tipo>
+        <nivel>35</nivel>
+    </pokemon>
+</equipo>

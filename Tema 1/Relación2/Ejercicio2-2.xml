@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE curso SYSTEM "curso.dtd">
+<curso>
+  <nombre>Desarrollo Web</nombre>
+  <profesor>María López</profesor>
+  <horas>120</horas>
+</curso>
