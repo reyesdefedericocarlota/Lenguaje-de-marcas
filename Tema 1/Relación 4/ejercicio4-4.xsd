@@ -1,52 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="biblioteca">
+    <xs:element name="clase">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="libro" maxOccurs="unbounded">
+                <xs:element name="alumno" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="titulo">
-                                <xs:simpleType>
-                                    <xs:restriction base="xs:string">
-                                        <xs:maxLength value="100" />
-                                    </xs:restriction>
-                                </xs:simpleType>
-                            </xs:element>
-                            <xs:element name="autor">
+                            <xs:element name="nombre">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
                                         <xs:pattern value="[A-Z].*" />
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
-                            <xs:element name="anioPublicacion">
+                            <xs:element name="edad">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:integer">
-                                        <xs:minInclusive value="1900" />
-                                        <xs:maxInclusive value="2025" />
+                                        <xs:minInclusive value="6" />
+                                        <xs:maxInclusive value="18" />
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
-                            <xs:element name="genero">
+                            <xs:element name="nota" minOccurs="1" maxOccurs="5">
                                 <xs:simpleType>
-                                    <xs:restriction base="xs:string">
-                                        <xs:enumeration value="Novela" />
-                                        <xs:enumeration value="Poesía" />
-                                        <xs:enumeration value="Ensayo" />
-                                        <xs:enumeration value="Teatro" />
+                                    <xs:restriction base="xs:decimal">
+                                        <xs:minInclusive value="0" />
+                                        <xs:maxInclusive value="10" />
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
-                            <xs:element name="isbn">
+                            <xs:element name="dni">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
-                                        <xs:pattern value="\d{3}-\d{2}-\d{4}-\d{3}-\d{1}" />
+                                        <xs:pattern value="\d{8}[A-Z]" />
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
                         </xs:sequence>
-                        <xs:attribute name="id" type="xs:positiveInteger" use="required" />
+                        <xs:attribute name="id" type="xs:positiveInteger" />
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>

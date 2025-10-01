@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="ejercicio4-4.xsd">
+    <alumno>
+        <nombre>Carlota Reyes de Federico</nombre>
+        <edad>18</edad>
+        <nota>9</nota>
+        <nota>8.5</nota>
+        <nota>7.45</nota>
+        <dni>78110247Q</dni>
+    </alumno>
+    <alumno>
+        <nombre>Angel Lopez Rodriguez</nombre>
+        <edad>16</edad>
+        <nota>6.5</nota>
+        <nota>10</nota>
+        <nota>8</nota>
+        <nota>5.4</nota>
+        <nota>7</nota>
+        <dni>65982309A</dni>
+    </alumno>
+</clase>

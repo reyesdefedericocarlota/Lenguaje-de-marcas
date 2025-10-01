@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calendario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="ejercicio4-3.xsd">
+    <evento id="1">
+        <titulo>Conferencia</titulo>
+        <fecha>2025-10-14</fecha>
+        <hora>18:00:00</hora>
+        <ubicacion>Escuela STEM</ubicacion>
+        <codigoPostal>18007</codigoPostal>
+    </evento>
+    <evento id="2">
+        <titulo>concierto</titulo>
+        <fecha>2025-11-09</fecha>
+        <hora>21:30:00</hora>
+        <ubicacion>Plaza de Toros</ubicacion>
+        <codigoPostal>18012</codigoPostal>
+    </evento>
+    <evento id="3">
+        <titulo>Reunión de trabajo</titulo>
+        <fecha>2025-02-10</fecha>
+        <hora>11:15:00</hora>
+        <ubicacion>Escuela STEM</ubicacion>
+        <codigoPostal>18007</codigoPostal>
+    </evento>
+</calendario>
