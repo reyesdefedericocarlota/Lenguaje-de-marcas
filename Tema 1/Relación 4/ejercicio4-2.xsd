@@ -9,7 +9,7 @@
                             <xs:element name="cliente">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="nombre" />
+                                        <xs:element name="nombre" type="xs:string" />
                                         <xs:element name="email">
                                             <xs:simpleType>
                                                 <xs:restriction base="xs:string">
@@ -25,8 +25,6 @@
                                                 </xs:restriction>
                                             </xs:simpleType>
                                         </xs:element>
-
-
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
@@ -36,7 +34,7 @@
                                         <xs:element name="producto" maxOccurs="unbounded">
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element name="nombre" />
+                                                    <xs:element name="nombre" type="xs:string"/>
                                                     <xs:element name="precio">
                                                         <xs:simpleType>
                                                             <xs:restriction base="xs:decimal">
@@ -47,7 +45,7 @@
                                                     <xs:element name="cantidad">
                                                         <xs:simpleType>
                                                             <xs:restriction base="xs:integer">
-                                                                <xs:minInclusive value="0" />
+                                                                <xs:minInclusive value="1" />
                                                             </xs:restriction>
                                                         </xs:simpleType>
                                                     </xs:element>
