@@ -9,7 +9,7 @@
                             <xs:element name="nombre">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
-                                        <xs:pattern value="[A-ZÁÉÍÓÚ].*" />
+                                        <xs:pattern value="[A-Z][A-Za-z| ]+" />
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
