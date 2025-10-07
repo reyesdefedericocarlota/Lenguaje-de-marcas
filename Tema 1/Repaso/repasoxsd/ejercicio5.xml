@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agencia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="ejercicio5.xsd">
+    <paquete codigo="PKT-2345">
+        <destino>Marruecos</destino>
+        <precio>500.50</precio>
+        <fechaInicio>2025-10-09</fechaInicio>
+        <fechaFin>2025-10-14</fechaFin>
+        <tipo>Cultura</tipo>
+        <cliente>
+            <nombre>Manuel</nombre>
+            <dni>77090246E</dni>
+            <edad>40</edad>
+            <email>manuelnav03@gmail.com</email>
+        </cliente>
+    </paquete>
+     <paquete codigo="PKT-5678">
+        <destino>Italia</destino>
+        <precio>745</precio>
+        <fechaInicio>2025-11-03</fechaInicio>
+        <fechaFin>2025-11-09</fechaFin>
+        <tipo>Familia</tipo>
+        <cliente>
+            <nombre>Carlota</nombre>
+            <dni>78110247Q</dni>
+            <edad>22</edad>
+            <email>carlota.reyesdefed@gmail.com</email>
+        </cliente>
+    </paquete>
+</agencia>
