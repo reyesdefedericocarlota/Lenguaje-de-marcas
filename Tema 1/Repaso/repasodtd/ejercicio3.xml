@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE curso [
+    <!ELEMENT curso (nombre, alumno+)>
+    <!ELEMENT alumno (nombre, apellido)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellido (#PCDATA)>
+]>
+<curso>
+    <nombre>1ºDAW</nombre>
+    <alumno>
+        <nombre>Carlota</nombre>
+        <apellido>Reyes de Federico</apellido>
+    </alumno>
+    <alumno>
+        <nombre>Ángel</nombre>
+        <apellido>López Rodríguez</apellido>
+    </alumno>
+</curso>

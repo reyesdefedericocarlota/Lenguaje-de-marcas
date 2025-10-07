@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (seccion+)>
+    <!ELEMENT seccion (nombre, libro+)>
+    <!ELEMENT libro (titulo, autor, anio?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT autor (#PCDATA)>
+    <!ELEMENT anio (#PCDATA)>
+]>
+<biblioteca>
+    <seccion>
+        <nombre>Novela histórica</nombre>
+        <libro>
+            <titulo>Los tres mundos</titulo>
+            <autor>Santiago Posteguillo</autor>
+            <anio>2025</anio>
+        </libro>
+        <libro>
+            <titulo>El círculo de los días</titulo>
+            <autor>Ken Follet</autor>
+            <anio>2025</anio>
+        </libro>
+    </seccion>
+    <seccion>
+        <nombre>Novela de terror</nombre>
+        <libro>
+            <titulo>La larga marcha</titulo>
+            <autor>Stephen King</autor>
+            <anio>1979</anio>
+        </libro>
+        <libro>
+            <titulo>Hija de la venganza</titulo>
+            <autor>Michael McDowell</autor>
+            <anio>2020</anio>
+        </libro>
+    </seccion>
+</biblioteca>

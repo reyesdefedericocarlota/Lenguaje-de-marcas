@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tienda SYSTEM "tienda.dtd">
+<tienda>
+    <nombre>Centro Pokemón</nombre>
+    <pokemon>
+        <nombre>Pikachu</nombre>
+        <tipo>Eléctrico</tipo>
+        <precio>25</precio>
+    </pokemon>
+     <pokemon>
+        <nombre>Bulbasur</nombre>
+        <tipo>Planta</tipo>
+        <tipo>Veneno</tipo>
+        <precio>30</precio>
+    </pokemon>
+</tienda>
