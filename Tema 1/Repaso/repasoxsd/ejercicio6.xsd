@@ -21,6 +21,8 @@
                                 <xs:simpleType>
                                     <xs:restriction base="xs:decimal">
                                         <xs:pattern value="\d+\.\d{2}" />
+                                        <xs:minInclusive value="0.01" />
+                                        <xs:maxInclusive value="9999.99" />
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
