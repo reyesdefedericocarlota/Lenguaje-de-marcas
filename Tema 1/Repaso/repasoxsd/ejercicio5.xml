@@ -14,7 +14,7 @@
             <email>manuelnav03@gmail.com</email>
         </cliente>
     </paquete>
-     <paquete codigo="PKT-5678">
+    <paquete codigo="PKT-5678">
         <destino>Italia</destino>
         <precio>745</precio>
         <fechaInicio>2025-11-03</fechaInicio>

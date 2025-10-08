@@ -11,6 +11,7 @@
                                     <xs:restriction base="xs:string">
                                         <xs:minLength value="3" />
                                         <xs:maxLength value="15" />
+                                        <xs:pattern value="[A-Za-z0-9_.]{3,15}" />
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
@@ -35,7 +36,8 @@
                                         <xs:element name="titulo" type="xs:string" />
                                         <xs:element name="fecha" type="xs:date" />
                                         <xs:element name="likes" type="xs:positiveInteger" />
-                                        <xs:element name="comentario" maxOccurs="unbounded">
+                                        <xs:element name="comentario" minOccurs="0"
+                                            maxOccurs="unbounded">
                                             <xs:complexType>
                                                 <xs:sequence>
                                                     <xs:element name="autor" type="xs:string" />

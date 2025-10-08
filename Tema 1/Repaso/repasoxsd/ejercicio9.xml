@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hospital xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="ejercicio9.xsd">
+    <nombre>PTS</nombre>
+    <departamento>
+        <nombre>Urgencias</nombre>
+        <medicoJefe>Manuel Camacho Rodriguez</medicoJefe>
+        <paciente>
+            <dni>45622788A</dni>
+            <edad>35</edad>
+            <fechaIngreso>2025-09-02</fechaIngreso>
+            <diagnostico>Torsión del tobillo</diagnostico>
+            <tratamiento>Reposo</tratamiento>
+        </paciente>
+        <paciente>
+            <dni>43765491Q</dni>
+            <edad>22</edad>
+            <fechaIngreso>2025-08-15</fechaIngreso>
+            <diagnostico>Ataque de ansiedad</diagnostico>
+        </paciente>
+    </departamento>
+    <departamento>
+        <nombre>Pediatría</nombre>
+        <medicoJefe>Luis Roca Villanueva</medicoJefe>
+        <paciente>
+            <dni>78110345E</dni>
+            <edad>9</edad>
+            <fechaIngreso>2025-02-23</fechaIngreso>
+            <diagnostico>Resfriado</diagnostico>
+            <tratamiento>Ibuprofeno cada 6 horas</tratamiento>
+        </paciente>
+        <paciente>
+            <dni>67549832S</dni>
+            <edad>7</edad>
+            <fechaIngreso>2025-06-09</fechaIngreso>
+            <diagnostico>Reacción alérgica</diagnostico>
+        </paciente>
+    </departamento>
+
+</hospital>

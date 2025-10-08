@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<redSocial xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="ejercicio8.xsd">
+    <usuario id="4">
+        <nombreUsuario>carlota_defed</nombreUsuario>
+        <email>carlota.reyesdefed@gmail.com</email>
+        <seguidores>750</seguidores>
+        <publicacion>
+            <titulo>Verano 2025</titulo>
+            <fecha>2025-08-14</fecha>
+            <likes>100</likes>
+            <comentario>
+                <autor>rangelitojb</autor>
+                <contenido>El mejor veranoo</contenido>
+                <fecha>2025-08-14T16:30:00</fecha>
+            </comentario>
+        </publicacion>
+    </usuario>
+    <usuario id="7">
+        <nombreUsuario>teresa.rdf</nombreUsuario>
+        <email>teresa.rdf@gmail.com</email>
+        <seguidores>425</seguidores>
+    </usuario>
+    <usuario id="23">
+        <nombreUsuario>izanagi.02</nombreUsuario>
+        <email>izan02_ar@gmail.com</email>
+        <seguidores>128</seguidores>
+        <publicacion>
+            <titulo>Paseo por la Alhambra</titulo>
+            <fecha>2025-10-21</fecha>
+            <likes>55</likes>
+        </publicacion>
+    </usuario>
+</redSocial>

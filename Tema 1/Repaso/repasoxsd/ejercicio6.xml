@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inventario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="ejercicio6.xsd">
-<producto id="3">
-    <nombre>MacBook</nombre>
-    <categoria>Ordenador</categoria>
-    <precio>1250.99</precio>
-    <stock>5</stock>
-</producto>
-<producto id="5">
-    <nombre>Samsung Galaxy</nombre>
-    <categoria>Móvil</categoria>
-    <precio>420.45</precio>
-    <stock>100</stock>
-    <proveedor>
-        <nombre>Depau</nombre>
-        <telefono>629-456-233</telefono>
-        <pais>España</pais>
-    </proveedor>
-</producto>
+    <producto id="3">
+        <nombre>MacBook</nombre>
+        <categoria>Ordenador</categoria>
+        <precio>1250.99</precio>
+        <stock>5</stock>
+    </producto>
+    <producto id="5">
+        <nombre>Samsung Galaxy</nombre>
+        <categoria>Móvil</categoria>
+        <precio>420.45</precio>
+        <stock>100</stock>
+        <proveedor>
+            <nombre>Depau</nombre>
+            <telefono>629-456-233</telefono>
+            <pais>España</pais>
+        </proveedor>
+    </producto>
 </inventario>

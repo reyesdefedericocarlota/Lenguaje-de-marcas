@@ -27,13 +27,18 @@
                                 </xs:complexType>
                             </xs:element>
                             <xs:element name="habitacion">
-                                <xs:simpleType>
-                                    <xs:restriction base="xs:string">
-                                        <xs:enumeration value="Individual" />
-                                        <xs:enumeration value="Doble" />
-                                        <xs:enumeration value="Suite" />
-                                    </xs:restriction>
-                                </xs:simpleType>
+                                <xs:complexType>
+                                    <xs:attribute name="tipo">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Individual" />
+                                                <xs:enumeration value="Doble" />
+                                                <xs:enumeration value="Suite" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="numero" type="xs:positiveInteger" />
+                                </xs:complexType>
                             </xs:element>
                             <xs:element name="fechaEntrada" type="xs:date" />
                             <xs:element name="fechaSalida" type="xs:date" />
