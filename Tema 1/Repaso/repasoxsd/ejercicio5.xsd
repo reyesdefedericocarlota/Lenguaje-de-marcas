@@ -16,14 +16,12 @@
                             <xs:element name="precio">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:decimal">
-                                        <xs:minInclusive value="1" />
+                                        <xs:minExclusive value="0" />
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
-                            <xs:element name="fechaInicio" type="xs:date">
-                            </xs:element>
-                            <xs:element name="fechaFin" type="xs:date">
-                            </xs:element>
+                            <xs:element name="fechaInicio" type="xs:date" /> 
+                            <xs:element name="fechaFin" type="xs:date" />
                             <xs:element name="tipo">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">

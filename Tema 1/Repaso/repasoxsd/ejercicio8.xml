@@ -8,7 +8,7 @@
         <publicacion>
             <titulo>Verano 2025</titulo>
             <fecha>2025-08-14</fecha>
-            <likes>100</likes>
+            <likes>110</likes>
             <comentario>
                 <autor>rangelitojb</autor>
                 <contenido>El mejor veranoo</contenido>
@@ -17,12 +17,12 @@
         </publicacion>
     </usuario>
     <usuario id="7">
-        <nombreUsuario>teresa.rdf</nombreUsuario>
+        <nombreUsuario>teresa_rdf</nombreUsuario>
         <email>teresa.rdf@gmail.com</email>
         <seguidores>425</seguidores>
     </usuario>
     <usuario id="23">
-        <nombreUsuario>izanagi.02</nombreUsuario>
+        <nombreUsuario>izanagi_02</nombreUsuario>
         <email>izan02_ar@gmail.com</email>
         <seguidores>128</seguidores>
         <publicacion>

@@ -24,7 +24,7 @@
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
-                            <xs:element name="paciente" minOccurs="1" maxOccurs="unbounded">
+                            <xs:element name="paciente" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="dni">
@@ -43,8 +43,13 @@
                                             </xs:simpleType>
                                         </xs:element>
                                         <xs:element name="fechaIngreso" type="xs:date" />
-                                        <xs:element name="diagnostico" type="xs:string"
-                                            minOccurs="1" />
+                                        <xs:element name="diagnostico">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="[A-ZÁÉÍÓÚ][A-Za-záéíóú| ]+" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
                                         <xs:element name="tratamiento" type="xs:string"
                                             minOccurs="0" />
                                     </xs:sequence>

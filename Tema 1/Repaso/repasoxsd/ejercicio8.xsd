@@ -9,7 +9,7 @@
                             <xs:element name="nombreUsuario">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
-                                        <xs:pattern value="[A-Za-z0-9_.]{3,15}" />
+                                        <xs:pattern value="[A-Za-z0-9_]{3,15}" />
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
@@ -33,7 +33,13 @@
                                     <xs:sequence>
                                         <xs:element name="titulo" type="xs:string" />
                                         <xs:element name="fecha" type="xs:date" />
-                                        <xs:element name="likes" type="xs:positiveInteger" />
+                                        <xs:element name="likes">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="0" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
                                         <xs:element name="comentario" minOccurs="0"
                                             maxOccurs="unbounded">
                                             <xs:complexType>
