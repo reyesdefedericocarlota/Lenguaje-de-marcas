@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- Indica que el documento usa HTML5 -->
+<html lang="es">  <!-- Lenguaje de la página para accesibilidad y SEO -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres (soporta tildes y ñ) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página sea adaptable a móviles -->
+    
+    <!-- Aquí va el nombre de la empresa o página -->
+    <title>Nombre de la Empresa o Página</title>
+</head>
+
+<body>
+
+    <!-- ======= ENCABEZADO ======= -->
+    <header id="inicio">
+
+        <!-- Logo o imagen representativa con su descripción -->
+        <figure>
+            <!-- Cambiar la ruta y la descripción según tu proyecto -->
+            <img src="RUTA/A/LA/IMAGEN" alt="Descripción del logo" width="400" height="150">
+            <figcaption>
+                <!-- Eslogan o frase representativa (opcional) -->
+                <strong>Eslogan o frase de la empresa</strong>
+            </figcaption>
+        </figure>
+
+        <!-- Nombre principal de la web -->
+        <h1>Nombre de la Empresa o Página</h1>
+
+        <!-- Menú de navegación con enlaces internos a secciones -->
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#video">Vídeo</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- ======= CONTENIDO PRINCIPAL ======= -->
+    <main>
+
+        <!-- Sección de servicios ofrecidos -->
+        <!-- Cada servicio va en <article> porque tiene sentido por sí mismo -->
+        <section id="servicios">
+            <h2>Servicios:</h2> <!-- Título de la sección -->
+
+            <!-- Cada artículo representa un servicio individual -->
+            <article>
+                <h2>Nombre del Servicio 1</h2> <!-- Título del servicio -->
+                <p>Descripción breve del servicio 1.</p> <!-- Descripción del servicio -->
+            </article>
+
+            <article>
+                <h2>Nombre del Servicio 2</h2>
+                <p>Descripción breve del servicio 2.</p>
+            </article>
+
+            <article>
+                <h2>Nombre del Servicio 3</h2>
+                <p>Descripción breve del servicio 3.</p>
+            </article>
+        </section>
+
+
+        <!-- Galería de imágenes -->
+        <section id="galeria">
+            <h2>Galería</h2> <!-- Título de la sección -->
+
+            <!-- Repetir figure para cada imagen que se quiera mostrar -->
+            <figure>
+                <img src="RUTA/A/UNA/IMAGEN" alt="Descripción de la imagen" width="250" height="300">
+                <figcaption>Texto explicativo de la imagen</figcaption>
+            </figure>
+        </section>
+
+
+        <!-- Sección de vídeo demostrativo -->
+        <section id="video">
+            <h2>Vídeo demostrativo</h2> <!-- Título de la sección -->
+            <figure>
+                <video width="600" height="400" controls>
+                    <!-- Cambiar la ruta del archivo de vídeo -->
+                    <source src="RUTA/DEL/VIDEO" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+                <figcaption>Descripción o título del video</figcaption>
+            </figure>
+        </section>
+
+
+        <!-- Testimonios de clientes -->
+        <section id="testimonios">
+            <h2>Testimonios</h2> <!-- Título de la sección -->
+
+            <!-- Cada blockquote es una cita de un cliente -->
+            <blockquote>
+                <p><strong>Nombre del Cliente:</strong> <em>"Opinión del cliente"</em></p>
+            </blockquote>
+
+            <blockquote>
+                <p><strong>Nombre del Cliente:</strong> <em>"Otra opinión"</em></p>
+            </blockquote>
+        </section>
+
+    </main>
+
+
+    <!-- ======= PIE DE PÁGINA ======= -->
+    <footer id="contacto">
+        <h2>Contacto</h2> <!-- Título de la sección -->
+
+        <!-- Lista de enlaces de contacto o redes sociales -->
+        <ul>
+            <li><a href="URL_DE_RED_SOCIAL" target="_blank">Nombre de la red social</a></li>
+            <li><a href="mailto:CORREO@EJEMPLO.COM">Enviar correo</a></li>
+            <li><a href="URL_DE_UBICACIÓN" target="_blank">Ver ubicación</a></li>
+        </ul>
+
+        <!-- Documento descargable -->
+        <p><a href="RUTA/DEL/DOCUMENTO" download>Descargar documento</a></p>
+
+        <!-- Derechos de autor -->
+        <p>&copy; AÑO Nombre de la Empresa. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
