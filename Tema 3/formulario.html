@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario - Mario Kart Grand Prix</title>
+    <meta name="description" content="Página de formularios para la PT3">
+</head>
+
+<body>
+
+    <h1>Mario Kart Grand Prix</h1>
+
+    <!-- Menú -->
+    <nav>
+        <ul>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+        </ul>
+    </nav>
+
+    <h2>Formularios</h2>
+
+    <!-- Aquí van los ejercicios de formularios -->
+    <form method="POST">
+
+        <label for="nombre">Nombre del piloto:</label>
+        <br />
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required minlength="2"
+            maxlength="50" />
+        <br />
+        <br />
+
+        <label for="email">Correo electrónico:</label>
+        <br />
+        <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required />
+        <br />
+        <br />
+
+        <label for="edad">Edad del piloto:</label>
+        <br />
+        <input type="number" id="edad" name="edad" min="8" max="99" required />
+        <br />
+        <br />
+
+        <label for="nombrekart">Nombre del kart:</label>
+        <input type="text" id="nombrekart" name="nombrekart" placeholder="Escribe nombre del kart" minlength="2"
+            maxlength="50" />
+        <br />
+        <br />
+
+        <label for="tipo">Tipo de piloto:</label>
+        <input type="radio" name="tipo" value="principiante"> Principiante
+        <input type="radio" name="tipo" value="intermedio"> Intermedio
+        <input type="radio" name="tipo" value="experto"> Experto
+        <br />
+        <br />
+
+        <label for="items">Items preferidos:</label>
+        <input type="checkbox" name="caparazon_rojo"> Caparazón rojo
+        <input type="checkbox" name="platano"> Plátano
+        <input type="checkbox" name="estrella"> Estrella
+        <input type="checkbox" name="champiñon_turbo"> Champiñón turbo
+        <br />
+        <br />
+
+        <select name="copa">
+            <option value="champiñon">Copa Champiñón</option>
+            <option value="flor">Copa Flor</option>
+            <option value="estrella">Copa Estrella</option>
+            <option value="especial">Copa Especial</option>
+        </select>
+        <br />
+        <br />
+
+        <textarea name="comentarios" rows="4" cols="50" placeholder="Escribe tu comentario"></textarea>
+        <br />
+        <br />
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Reiniciar</button>
+    </form>
+</body>
+
+</html>
