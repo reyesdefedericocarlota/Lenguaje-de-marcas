@@ -1,0 +1,27 @@
+* {
+    margin: 7;
+    box-sizing: border-box;
+}
+
+p {
+    color: red;
+    font-size: 16px;
+}
+
+.destacado {
+    background-color: red;
+    color: white;
+    padding: 10px;
+}
+
+#accion {
+    font-size: 24px;
+    text-align: center;
+    background-color: blueviolet;
+    color: azure;
+}
+
+h1, h2 {
+    font-family: cursive;
+    color: goldenrod;
+}

@@ -1,0 +1,12 @@
+* {
+    margin: 20;
+    padding: 100;
+    color: yellow;
+}
+
+body {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sierra_Nevada_desde_el_embalse_del_Cubillas%2C_en_Atarfe_%28Granada%29.jpg/2560px-Sierra_Nevada_desde_el_embalse_del_Cubillas%2C_en_Atarfe_%28Granada%29.jpg");
+    background-size: cover; /* Ajusta la imagen a la pantalla */
+    background: linear-gradient(red, blue); /*Degradado de arriba a abajo por defecto*/
+    background-repeat: no-repeat;/* Evita que se repita */
+}
