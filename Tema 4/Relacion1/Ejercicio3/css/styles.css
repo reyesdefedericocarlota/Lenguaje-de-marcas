@@ -3,6 +3,10 @@
     padding: 0;
 }
 
-div > ul {
+div>ul {
     color: green;
+}
+
+div+p {
+    background-color: yellow;
 }

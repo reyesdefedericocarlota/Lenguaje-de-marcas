@@ -1,0 +1,13 @@
+h2 {
+    color: blueviolet;
+}
+
+body {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/de/Dawn_Charles_V_Palace_Alhambra_Granada_Andalusia_Spain.jpg);
+    background-size: cover;
+}
+
+p:hover {
+    background-color: yellow;
+    font-size: 18px;
+}
