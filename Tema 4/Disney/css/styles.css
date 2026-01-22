@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+    font-family: fantasy;
+    font-family: cursive;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #0DD9DB;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #DB7DD4;
+    border-bottom: 5px solid #DA1DDB;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    /* separación entre palabras */
+    margin-right: 30px;
+    /* separación del borde derecho */
+    margin-top: 20px;
+    /* separación del borde superior */
+}
+
+.enlace:hover {
+    color: #53DB59;
+}
+
+.enlace:active {
+    background-color: yellow;
+}
+
+.seccion-1 {
+    display: flex;
+    max-width: 40%;
+    /* Ocupa hasta el 40% del contenedor padre */
+    margin: 0 auto;
+    /* Centra el contenedor horizontalmente */
+    padding: 20px;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("https://img.freepik.com/vector-gratis/fondo-navideno-diseno-copos-nieve-estrellas_1048-13325.jpg?semt=ais_hybrid&w=740&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+.parrafo {
+    padding: 10px;
+}
+
+.boton-1:hover {
+    background-color: #21DC94;
+    transform: scale(1, 2);
+}
+
+.clase img {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+}
+
+.clase>h3 {
+    font-style: italic, oblique;
+    color: #DB6F48;
+
+}
+
+.peliculas-destacadas {
+    display: flex;
+    gap: 20px;
+    /* espacio de 20px entre cada caja */
+    padding: 40px;
+}
+
+.personajes-destacados {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+}
+
+.mickey {
+    background-color: #FFD700;/
+}
+
+.mickey h3 {
+    color: #E53935;
+    font-size: 20px;
+}
+
+.simba {
+    background-color: #FFA726;
+}
+
+.simba h3 {
+    color: #6D4C41;
+    font-size: 18px;
+}
+
+.elsa {
+    background-color: #81D4FA;
+}
+
+.elsa h3 {
+    color: #1E88E5;
+    font-size: 19px;
+}
+
+.aladdin {
+    background-color: #FFCC80;
+}
+
+.aladdin h3 {
+    color: #8E24AA;
+    font-size: 18px;
+}
+
+.clase img:hover + h3 {
+  color: black;
+}
