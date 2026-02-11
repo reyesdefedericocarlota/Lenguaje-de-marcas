@@ -130,6 +130,20 @@ header {
     font-size: 18px;
 }
 
-.clase img:hover + h3 {
-  color: black;
+.clase img:hover+h3 {
+    color: black;
+}
+
+
+ul.evento>li {
+    padding: 15px; /* espacio dentro de la tarjeta */
+    margin-bottom: 15px; /* espacio entre tarjetas */
+    background-color: #7DDBC8;
+    border: 3px dashed #1E88E5;
+}
+
+
+ul.evento > li.evento-3 {
+  background-color: #D9DCA9;
+  border: 3px dotted #DBA26C;
 }
