@@ -1,0 +1,182 @@
+
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*hace que el width y height incluyan el padding y el borde dentro del tamaño total del elemento. */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+.header { 
+  background-color: #4b79a1;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 5px solid #27496d;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-list li {
+  margin: 0 10px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+  color: #f08080;
+}
+
+.nav-list a.active {
+  font-weight: bold;
+}
+
+/* Sección Hero */
+.hero {
+  background-image: url('https://picsum.photos/1200/400');
+  background-size: cover;
+  background-position: center;
+  text-align: center; /* Alinea el texto horizontalmente dentro de un elemento. */
+  color: white;
+  padding: 60px 20px;
+}
+
+.hero-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #27496d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero-button:hover {
+  background-color: #1e3556;
+  transform: scale(1.1);
+}
+
+/* Películas */
+.peliculas {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.pelicula {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.pelicula img {
+  border-radius: 10px;
+}
+
+.pelicula-button {
+  margin-top: 10px;
+  padding: 5px 15px;
+  background-color: #4b79a1;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.pelicula-button:hover {
+  background-color: #27496d;
+}
+
+/* Personajes */
+.personajes {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.personaje {
+  text-align: center;
+  padding: 10px;
+}
+
+.personaje1 {
+  background-color: #ffefd5;
+}
+
+.personaje2 {
+  background-color: #f0e68c;
+}
+
+.personaje3 {
+  background-color: #98fb98;
+}
+
+.personaje4 {
+  background-color: #afeeee;
+}
+
+/* Eventos */
+.eventos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.evento {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+}
+
+.evento-igual {
+  background-color: #e0f7fa;
+}
+
+.evento-diferente {
+  background-color: #ffe4e1;
+  border-color: #f08080;
+}
+
+/* Pie de página */
+.footer {
+  background-color: #4b79a1;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer .social-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 10px;
+}
+
+.footer .social-list li {
+  margin: 0 10px;
+}
+
+.footer .social-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer .social-list a:hover {
+  text-decoration: underline;
+}
