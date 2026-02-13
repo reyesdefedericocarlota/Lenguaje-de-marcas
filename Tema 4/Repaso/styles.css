@@ -1,154 +1,74 @@
-/* =========================
-   1) Estilos globales
-========================= */
+/* 1) Estilos globales */
 .page,
 .page * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /*hace que el width y height incluyan el padding y el borde dentro del tamaño total del elemento. */
 }
 
 .page {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  background: green;
+  background: #0b1220;
   color: #e7ecf5;
+  font-family: Arial, sans-serif;
   line-height: 1.5;
-  /* Separacion entre líneas*/
 }
 
-.page a {
-  color: inherit;
-  /* Usar el mismo color que el elemento padre */
-  text-decoration: none;
-  /* Quita la decoracion del texto, en este caso el subrayado de los enlaces */
-}
-
-
-.page img {
-  display: block;
-  max-width: 100%;
-  /* Para que no sean más anchas que su contenedor */
-}
-
-/* Un “contenedor” general para dar aire sin usar selectores por posición */
-.site-header,
-.hero,
-.cases,
-.threats,
-.events,
-.site-footer {
-  padding: 28px 20px;
-  /* El primero es el espacio arriba y abajo y el segundo izq dcha */
-}
-
-
-/* =========================
-   2) Encabezado
-========================= */
+/* 2) Encabezado */
 .site-header {
   background: #0f1a33;
-  border-bottom: 3px solid #ff3b3b;
-  box-shadow: 0 10px 22233px rgba(0, 0, 0, 0.35);
+  padding: 16px;
+  border-bottom: 2px solid #ff3b3b; /* detalle decorativo */
   display: flex;
-  /* Los elementos se alinean en una fila horizontal */
-  align-items: center;
-  /* Alinea los elementos a lo largo del eje transversal, en este caso es vertical */
+  align-items: center; /* Alinea el texto horizontalmente dentro de un elemento. */
+  color: white;
   justify-content: space-between;
-  /*  Los elementos se distribuyen uniformemente, dejando el primer y último elemento alineados con los bordes del contenedor.*/
-  gap: 18px;
-  /* “Crea un espacio de 18px entre todos los elementos hijos dentro de un contenedor flex */
+  gap: 12px;
 }
 
-.site-header h1 {
-  font-family: "Trebuchet MS", system-ui, sans-serif;
-  font-size: 28px;
-  letter-spacing: 1px;
-  /* Espacio entre las letras de un texto */
-  text-transform: uppercase;
-}
-
-.site-nav {
-  display: flex;
-  align-items: center;
-
-}
-
-.nav-list {
-  list-style: none;
+.site-nav .nav-list {
+  list-style: none; /* quitar estilos por defecto */
   display: flex;
   gap: 10px;
-  align-items: center;
 }
 
-.nav-item a {
+.site-nav .nav-item a {
   display: inline-block;
-  /* Hace que el elemento se comporte como un bloque que puede tener ancho y alto, pero permanece en la misma línea que otros elementos */
-  padding: 10px 12px;
-  border-radius: 10px;
-  /* Redondea los bordes de un elemento */
-  background: rgba(255, 255, 255, 0.06);
-  /* rgba(red, green, blue, transparencia) */
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  padding: 8px 10px;
+  color: #e7ecf5;
+  text-decoration: none;
 }
 
-.nav-item a:hover {
-  background: rgba(255, 59, 59, 0.20);
-  border-color: rgba(255, 59, 59, 0.55);
+.site-nav .nav-item a:hover {
+  background: rgba(255, 59, 59, 0.2);
 }
 
-.nav-item--active a {
-  background: rgba(255, 59, 59, 0.32);
-  border-color: rgba(255, 59, 59, 0.9);
-  box-shadow: 0 10px 18px rgba(255, 59, 59, 0.18);
-  /* Crea una. sombra alrededor de un elemento */
+.site-nav .nav-item--active a {
+  background: rgba(255, 59, 59, 0.35);
 }
 
-
-/* =========================
-   3) Hero
-========================= */
+/* 3) Hero */
 .hero {
-  min-height: 360px;
-  /* El contenedor tendrá como minimo esa altura*/
-  border-radius: 18px;  
-  margin: 18px 20px;  /* Arriba y abajo,, izq y dcha */
+  min-height: 320px; /* altura destacada */
+  padding: 24px 16px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
   background:
-    linear-gradient(120deg, rgba(255, 59, 59, 0.25), rgba(11, 18, 32, 0.90)),
-    url("https://placehold.co/1200x500");
-  background-size: cover; /*La imagen cubre todo el contenedor, recortando si es necesario*/
-  background-position: center;   /* Asegura que la imagen se centre */
-  border: 1px solid rgba(255, 255, 255, 0.10);
-
-}
-
-.hero h2 {
-  font-family: "Trebuchet MS", system-ui, sans-serif;
-  font-size: 34px;
-  max-width: 720px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.hero p {
-  max-width: 680px;
-  margin-top: 10px; /* Separación con el elemento que está arriba */
-  color: rgba(231, 236, 245, 0.88);
-  font-size: 16px;
+    linear-gradient(rgba(11, 18, 32, 0.75), rgba(11, 18, 32, 0.75)),
+    url("https://placehold.co/1200x500"); /* recurso de fondo */
+  background-size: cover;
+  background-position: center;
 }
 
 .hero button {
-  margin-top: 18px;
-  padding: 12px 16px;
+  width: fit-content;
+  padding: 10px 14px;
   border: 0;
-  border-radius: 12px;
-  cursor: pointer; /* Cuando pasas el ratón sobre el botón, el cursor cambia a la mano */
+  cursor: pointer;
   background: #ff3b3b;
   color: #0b1220;
-  font-weight: 700; /* controla el grosor o la “negrita” de la tipografía de un texto */
-  letter-spacing: 0.3px;
-  box-shadow: 0 14px 22px rgba(255, 59, 59, 0.18);
+  font-weight: bold;
 }
 
 .hero button:hover {
@@ -156,233 +76,137 @@
   transform: scale(1.03);
 }
 
-/* Para centrar el “bloque” de texto del hero sin tocar estructura */
-.hero {
-  justify-content: flex-start;
-}
-
-.hero > * {
-  max-width: 900px;
-}
-
-
-/* =========================
-   4) Casos reales (tarjetas)
-========================= */
+/* 4) Casos reales (tarjetas) */
 .cases {
-  background: rgba(255, 255, 255, 0.03);
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.cases h2 {
-  font-family: "Trebuchet MS", system-ui, sans-serif;
-  font-size: 22px;
-  margin-bottom: 18px;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-}
-
-/* El contenedor de tarjetas: el section (con clase) actúa como flex */
-.cases {
+  padding: 24px 16px;
   display: flex;
-  flex-wrap: wrap; /* Los hijos que no caben pasan a la línea siguiente */
-  justify-content: space-between;
-  align-items: stretch; /* controla cómo se alinean los hijos en el eje transversal (el eje perpendicular al principal). hace que los elementos hijos se estiren para ocupar toda la altura disponible del contenedor. */
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-/* Mantener el h2 “a lo ancho” sin selectores por posición: lo hacemos bloque */
+/* para que el h2 no “compita” con las tarjetas */
 .cases h2 {
-  flex-basis: 100%; /* 100% significa: quiero que este <h2> ocupe todo el ancho disponible del contenedor*/
+  width: 100%;
 }
 
 .case-card {
-  flex: 1 1 240px; /*flex-grow flex-shrink flex-basis;*/
-  background: rgba(15, 26, 51, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 14px 22px rgba(0, 0, 0, 0.30)
+  flex: 1 1 220px;
+  padding: 14px;
+  background: #0f1a33;
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-/* Descendiente para la imagen */
+/* descendientes (imagen) */
 .case-card img {
-  width: 100%;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  margin-bottom: 12px;
+  border-radius: 10px;
 }
 
-/* Hijo directo para el título (el h3 es hijo directo del div) */
+/* hijo directo (título) */
 .case-card > h3 {
-  font-size: 18px;
-  letter-spacing: 0.3px;
-  margin-bottom: 8px;
-}
-
-.case-card p {
-  color: rgba(231, 236, 245, 0.86);
-  margin-bottom: 12px;
+  margin-top: 10px;
 }
 
 .case-card button {
-  width: 100%;
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 59, 59, 0.55);
-  background: rgba(255, 59, 59, 0.16);
-  color: #ffd1d1;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: 0;
   cursor: pointer;
-  font-weight: 700;
+  background: rgba(255, 59, 59, 0.2);
+  color: #e7ecf5;
 }
 
 .case-card button:hover {
-  background: rgba(255, 59, 59, 0.26);
-  transform: translateY(-2px);
+  background: rgba(255, 59, 59, 0.35);
 }
 
-/* =========================
-   5) Amenazas (Flex + estilos distintos + selector +)
-========================= */
+/* 5) Amenazas */
 .threats {
+  padding: 24px 16px;
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 12px;
 }
 
 .threats h2 {
-  flex-basis: 100%;
+  width: 100%;
 }
 
 .threat-card {
-  flex: 1 1 210px;
-  border-radius: 16px;
+  flex: 1 1 200px;
   padding: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.25);
-}
-
-.threat-card img {
-  border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  margin-bottom: 10px;
-  cursor: pointer;
 }
 
-/* Estilos distintos por tarjeta */
-.threat-card--malware {
-  background: rgba(255, 59, 59, 0.10);
-}
-.threat-card--datos {
-  background: rgba(59, 130, 246, 0.10);
-}
-.threat-card--legal {
-  background: rgba(245, 158, 11, 0.10);
-}
-.threat-card--suplantacion {
-  background: rgba(168, 85, 247, 0.10);
-}
+/* estilos distintos por tarjeta (por clases) */
+.threat-card--malware { background: rgba(255, 59, 59, 0.10); }
+.threat-card--datos { background: rgba(59, 130, 246, 0.10); }
+.threat-card--legal { background: rgba(245, 158, 11, 0.10); }
+.threat-card--suplantacion { background: rgba(168, 85, 247, 0.10); }
 
-.threat-card h3 {
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-
-/* Ajustes diferentes al “nombre” según tarjeta */
-.threat-card--malware h3 {
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-.threat-card--datos h3 {
-  font-style: italic;
-}
-.threat-card--legal h3 {
-  text-decoration: underline;
-}
-.threat-card--suplantacion h3 {
-  letter-spacing: 1px;
-}
-
-/* Selector de hermanos adyacentes (+):
-   al pasar el ratón sobre la imagen, cambia el nombre (h3) */
+/* selector de hermanos adyacentes (+) */
 .threat-card img:hover + h3 {
   color: #ff3b3b;
-  text-shadow: 0 8px 18px rgba(255, 59, 59, 0.20); /* Crea una sombra detrás del texto */
 }
 
-.threat-card p {
-  color: rgba(231, 236, 245, 0.86);
+/* 6) Eventos */
+.events {
+  padding: 24px 16px;
 }
 
-/* =========================
-   6) Eventos / campañas
-========================= */
 .event-list {
-  list-style: none;      /* Quita viñetas */
-  margin: 0;             /* Quita margen por defecto */
-  padding: 0;            /* Quita padding por defecto */
-}
-
-ul.event-list > li.event-item {
-  background: #0f1a33;   /* Fondo oscuro */
-  color: #ffd1d1;        /* Texto claro */
-  padding: 16px;
-  margin-bottom: 12px;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-}
-
-ul.event-list > li.event-item--special {
-  background: gray;   /* Fondo rojo intenso */
-  color: white;           /* Texto claro */
-  padding: 13px;  /* Diferente detalle */
-  box-shadow: 0 6px 18px rgba(255, 59, 59, 0.4);
-}
-
- .event-list time {
-  background: rgba(255, 255, 255, 0.10);
-  border-color: rgba(255, 255, 255, 0.18);
-  color: #e7ecf5;
-  padding: 4px 8px;
-  border-radius: 6px; 
-}
-
-/* =========================
-   7) Footer
-========================= */
-.site-footer {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #0f1a33;
-  color: #ffd1d1;    
+  gap: 12px;
 }
 
-.site-footer p {
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.4;
+/* selector combinado ul > li junto con clases */
+.event-list > .event-item {
+  flex: 1 1 240px;
+  padding: 14px;
+  background: #0f1a33;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* tercer evento distinto */
+.event-item--special {
+  background: rgba(255, 59, 59, 0.12);
+  border-color: rgba(255, 59, 59, 0.35);
+}
+
+/* fecha destacada */
+.event-item time {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 10px;
+  background: rgba(255, 59, 59, 0.2);
+  border: 1px solid rgba(255, 59, 59, 0.4);
+}
+
+/* 7) Footer */
+.site-footer {
+  padding: 16px;
+  background: #070b14;
+  color: #e7ecf5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .social-list {
-  list-style: none;    /* Quita viñetas */
-  display: flex;       /* Alinea horizontalmente */
-  gap: 12px;           /* Espacio entre enlaces */
-  margin: 0;
-  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 10px;
 }
 
 .social-item a {
-  color: #ffd1d1;           /* Texto claro */
-  text-decoration: none;     /* Sin subrayado */
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: background 0.3s, color 0.3s; /* Transición suave al hover */
+  color: #e7ecf5;
+  text-decoration: none;
+  padding: 8px 10px;
 }
 
 .social-item a:hover {
-  background-color: #ff3b3b; /* Fondo rojo al pasar el ratón */
-  color: white;               /* Texto blanco al pasar el ratón */
+  background: rgba(255, 59, 59, 0.2);
 }
