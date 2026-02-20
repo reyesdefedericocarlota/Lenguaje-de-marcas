@@ -1,17 +1,17 @@
-const elementosLista = document.getElementsByTagName("li");
+const frutas = document.getElementsByTagName("li");
 
-for (const elemento of elementosLista) {
-  elemento.style.border = "2px solid orange";
+for (const fruta of frutas) {
+  fruta.style.border = "2px solid orange";
 }
 
-let botonResaltar = document.getElementById("marcarFrutas");
+const botonResaltar = document.getElementById("marcarFrutas");
 
 botonResaltar.addEventListener("click", function () {
-  for (const elemento of elementosLista) {
-    elemento.style.backgroundColor = "lightpink";
+  for (const fruta of frutas) {
+    fruta.style.backgroundColor = "lightpink";
 
-    if (!elemento.textContent.includes("✅")) {
-      elemento.textContent += " ✅";
+    if (!fruta.textContent.includes("✅")) {
+      fruta.textContent += " ✅";
     }
   }
 });
