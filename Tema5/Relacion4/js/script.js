@@ -1,8 +1,10 @@
 // Ejercicio 1
 const boton = document.getElementById("imgClick");
-boton.addEventListener("click", function () {
+boton.addEventListener("click", mostrarAlerta);
+
+function mostrarAlerta() {
   alert("¡Siente la Energía de Burn!");
-});
+}
 
 // Ejercicio 2
 const imagen = document.getElementById("imgHover");
@@ -45,7 +47,6 @@ const input = document.getElementById("codigo");
 const parrafo = document.getElementById("mensaje");
 
 input.addEventListener("focus", function () {
-  this.style.outline = "none";
   this.style.border = "2px solid green";
   parrafo.textContent = "Introduce tu código de energía";
 });
