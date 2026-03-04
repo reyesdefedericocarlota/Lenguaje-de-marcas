@@ -17,7 +17,7 @@ selectProducto.addEventListener("change", function () {
 });
 
 document.getElementById("pedidoForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // ⬅️ siempre
+   // ⬅️ siempre
 
   let nombre = document.getElementById("nombre").value.trim();
   let email = document.getElementById("email").value.trim();
@@ -25,6 +25,7 @@ document.getElementById("pedidoForm").addEventListener("submit", function(event)
 
   if (nombre === "" || email === "" || cantidad <= 0) {
     console.log("Error: Todos los campos son obligatorios y la cantidad debe ser mayor a 0");
+    event.preventDefault();
   } else {
     console.log("Formulario enviado correctamente");
   }
