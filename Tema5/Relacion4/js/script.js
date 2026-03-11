@@ -12,11 +12,11 @@ const imagen = document.getElementById("imgHover");
 // Guardamos la imagen original
 const fotoOriginal = imagen.src;
 
-imagen.addEventListener("mouseenter", function () {
+imagen.addEventListener("mouseover", function () {
   imagen.src = "https://picsum.photos/200?random=99";
 });
 
-imagen.addEventListener("mouseleave", function () {
+imagen.addEventListener("mouseout", function () {
   imagen.src = fotoOriginal;
 });
 
