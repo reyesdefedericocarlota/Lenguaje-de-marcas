@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relación 1 — Centro de Estadísticas (Balonmano)</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="cabecera">
+    <h1>Centro de Estadísticas — Fajalauza Handball Club</h1>
+    <p class="sub">Manipulación del DOM + <code>dataset</code> con jugadores</p>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <h2>Plantilla</h2>
+
+      <div class="controles">
+        <label for="filtroPosicion">Filtrar por posición:</label>
+        <select id="filtroPosicion">
+          <option value="todas">Todas</option>
+          <option value="Portería">Portería</option>
+          <option value="Central">Central</option>
+          <option value="Lateral">Lateral</option>
+          <option value="Pivote">Pivote</option>
+          <option value="Extremo">Extremo</option>
+        </select>
+
+        <div class="acciones">
+          <button id="btnSumarGol" type="button">+1 gol (seleccionado)</button>
+          <button id="btnBorrar" type="button">Borrar seleccionado</button>
+        </div>
+      </div>
+
+      <div id="listaJugadores" class="lista">
+        <!-- Tarjetas con dataset -->
+        <article class="jugador" tabindex="0" data-dorsal="1" data-posicion="Portería" data-goles="0">
+          <h3 class="nombre">Nuria Campos</h3>
+          <p class="meta">Dorsal <strong class="dorsal">1</strong> · <span class="posicion">Portería</span></p>
+          <p class="stats">Goles: <strong class="goles">0</strong></p>
+        </article>
+
+        <article class="jugador" tabindex="0" data-dorsal="7" data-posicion="Extremo" data-goles="12">
+          <h3 class="nombre">Álvaro Salas</h3>
+          <p class="meta">Dorsal <strong class="dorsal">7</strong> · <span class="posicion">Extremo</span></p>
+          <p class="stats">Goles: <strong class="goles">12</strong></p>
+        </article>
+
+        <article class="jugador" tabindex="0" data-dorsal="9" data-posicion="Central" data-goles="18">
+          <h3 class="nombre">Lucía Medina</h3>
+          <p class="meta">Dorsal <strong class="dorsal">9</strong> · <span class="posicion">Central</span></p>
+          <p class="stats">Goles: <strong class="goles">18</strong></p>
+        </article>
+
+        <article class="jugador" tabindex="0" data-dorsal="13" data-posicion="Pivote" data-goles="10">
+          <h3 class="nombre">Mario Torres</h3>
+          <p class="meta">Dorsal <strong class="dorsal">13</strong> · <span class="posicion">Pivote</span></p>
+          <p class="stats">Goles: <strong class="goles">10</strong></p>
+        </article>
+
+        <article class="jugador" tabindex="0" data-dorsal="21" data-posicion="Lateral" data-goles="15">
+          <h3 class="nombre">Carmen Rojas</h3>
+          <p class="meta">Dorsal <strong class="dorsal">21</strong> · <span class="posicion">Lateral</span></p>
+          <p class="stats">Goles: <strong class="goles">15</strong></p>
+        </article>
+      </div>
+    </section>
+
+    <aside class="card" id="panelDetalles">
+      <h2>Detalles del jugador</h2>
+      <div class="detalles">
+        <p><span class="label">Nombre:</span> <strong id="detalleNombre">—</strong></p>
+        <p><span class="label">Posición:</span> <strong id="detallePosicion">—</strong></p>
+        <p><span class="label">Goles:</span> <strong id="detalleGoles">—</strong></p>
+      </div>
+
+      <hr class="sep" />
+
+      <h2>Nuevo jugador</h2>
+      <form id="formNuevoJugador" autocomplete="off">
+        <label for="nuevoNombre">Nombre</label>
+        <input id="nuevoNombre" type="text" placeholder="Ej: Paula Márquez" />
+
+        <label for="nuevoDorsal">Dorsal</label>
+        <input id="nuevoDorsal" type="number" min="1" placeholder="Ej: 11" />
+
+        <label for="nuevaPosicion">Posición</label>
+        <select id="nuevaPosicion">
+          <option value="Portería">Portería</option>
+          <option value="Central">Central</option>
+          <option value="Lateral">Lateral</option>
+          <option value="Pivote">Pivote</option>
+          <option value="Extremo">Extremo</option>
+        </select>
+
+        <label for="nuevosGoles">Goles</label>
+        <input id="nuevosGoles" type="number" min="0" placeholder="Ej: 0" />
+
+        <button type="submit">Añadir a plantilla</button>
+
+        <p id="mensajeForm" class="mensaje" aria-live="polite"></p>
+      </form>
+    </aside>
+  </main>
+
+  <footer class="pie">
+    <small>Relación 1 · DOM + dataset · Temática Balonmano</small>
+  </footer>
+</body>
+</html>
