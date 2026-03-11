@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relación R2 — Ultramarinos: Preparación de pedidos</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="cabecera">
+    <h1>Ultramarinos San Antón</h1>
+    <p class="sub">Preparación de pedidos · DOM + dataset</p>
+  </header>
+
+  <main class="contenedor">
+    <section class="resumen">
+      <h2>Producto activo</h2>
+      <p><strong>Nombre:</strong> <span id="resumenNombre">—</span></p>
+      <p><strong>Sección:</strong> <span id="resumenSeccion">—</span></p>
+      <p><strong>Unidades pedidas:</strong> <span id="resumenUnidades">—</span></p>
+
+      <div class="acciones">
+        <button id="btnAnadirUnidad" type="button">Añadir al pedido</button>
+        <button id="btnPasarPedido" type="button">Pasar a pedido</button>
+      </div>
+    </section>
+
+    <section class="zona-filtro">
+      <label for="filtroSeccion">Filtrar por sección:</label>
+      <select id="filtroSeccion">
+        <option value="Todas">Todas</option>
+        <option value="Despensa">Despensa</option>
+        <option value="Bebidas">Bebidas</option>
+        <option value="Limpieza">Limpieza</option>
+        <option value="Panadería">Panadería</option>
+      </select>
+    </section>
+
+    <section>
+      <h2>Productos disponibles</h2>
+      <div id="zonaProductos" class="productos">
+        <div class="producto" tabindex="0" data-seccion="Despensa" data-unidades="0">
+          <h3 class="nombre">Arroz redondo</h3>
+          <p class="seccion">Sección: <span>Despensa</span></p>
+          <p class="cantidad">Pedidas: <strong class="unidades">0</strong></p>
+        </div>
+
+        <div class="producto" tabindex="0" data-seccion="Bebidas" data-unidades="0">
+          <h3 class="nombre">Agua mineral</h3>
+          <p class="seccion">Sección: <span>Bebidas</span></p>
+          <p class="cantidad">Pedidas: <strong class="unidades">0</strong></p>
+        </div>
+
+        <div class="producto" tabindex="0" data-seccion="Panadería" data-unidades="0">
+          <h3 class="nombre">Picos de pan</h3>
+          <p class="seccion">Sección: <span>Panadería</span></p>
+          <p class="cantidad">Pedidas: <strong class="unidades">0</strong></p>
+        </div>
+
+        <div class="producto" tabindex="0" data-seccion="Limpieza" data-unidades="0">
+          <h3 class="nombre">Lavavajillas</h3>
+          <p class="seccion">Sección: <span>Limpieza</span></p>
+          <p class="cantidad">Pedidas: <strong class="unidades">0</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pedido">
+      <h2>Líneas del pedido</h2>
+      <ul id="listaPedido"></ul>
+    </section>
+
+    <section class="nuevo">
+      <h2>Nuevo producto</h2>
+      <form id="formNuevoProducto">
+        <input id="nuevoNombre" type="text" placeholder="Nombre del producto" />
+
+        <select id="nuevaSeccion">
+          <option value="Despensa">Despensa</option>
+          <option value="Bebidas">Bebidas</option>
+          <option value="Limpieza">Limpieza</option>
+          <option value="Panadería">Panadería</option>
+        </select>
+
+        <input id="nuevasUnidades" type="number" min="0" placeholder="Unidades iniciales" />
+
+        <button type="submit">Crear producto</button>
+        <p id="mensajeForm"></p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
