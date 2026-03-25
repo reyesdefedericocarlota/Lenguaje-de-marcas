@@ -11,7 +11,7 @@ async function obtenerPais(nombre) {
     const datos = await respuesta.json();
     mostrarPais(datos[0]);
   } catch (error) {
-    mostrarError("No se encontró el país o hubo un error");
+    mostrarError("No se encontró el país", "resultado-nombre");
   }
 }
 
@@ -39,15 +39,13 @@ function mostrarPais(pais) {
   `;
 }
 
-function mostrarError(mensaje) {
-  let contenedor;
-  if ((contenedor = document.getElementById("resultado-nombre"))) {
-    contenedor.innerHTML = `<p class="error">${mensaje}</p>`;
-  } else if ((contenedor = document.getElementById("resultado-region"))) {
+function mostrarError(mensaje, id) {
+  const contenedor = document.getElementById(id);
+
+  if (contenedor) {
     contenedor.innerHTML = `<p class="error">${mensaje}</p>`;
   }
 }
-
 const form = document.getElementById("form-nombre");
 
 form.addEventListener("submit", function (event) {
@@ -73,12 +71,12 @@ async function obtenerPaises(region) {
     const datos = await respuesta.json();
     mostrarPaises(datos);
   } catch (error) {
-    mostrarError("No se encontraron paises o hubo un error");
+    mostrarError("No se encontraron paises o hubo un error", "resultado-region" );
   }
 }
 
 function mostrarPaises(paises) {
- const contenedor = document.getElementById("resultado-region");
+  const contenedor = document.getElementById("resultado-region");
 
   contenedor.innerHTML = "";
 
@@ -101,4 +99,48 @@ for (const boton of botones) {
     const region = boton.dataset.region;
     obtenerPaises(region);
   });
+}
+
+const formCapital = document.getElementById("form-capital");
+formCapital.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const input = document.getElementById("input-capital").value.trim();
+
+  if (input) {
+    obtenerCapital(input);
+  }
+});
+
+async function obtenerCapital(capital) {
+  const apiUrl = `https://restcountries.com/v3.1/capital/${capital}`;
+
+  try {
+    const respuesta = await fetch(apiUrl);
+
+    if (!respuesta.ok) {
+      throw new Error("No se encontró la capital");
+    }
+
+    const datos = await respuesta.json();
+    mostrarCapital(datos[0]);
+  } catch (error) {
+    mostrarError(
+      "No se encontró la capital o hubo un error",
+      "resultado-capital",
+    );
+  }
+}
+
+function mostrarCapital(capital) {
+  const contenedor = document.getElementById("resultado-capital");
+
+  contenedor.innerHTML = `
+      <img src="${capital.flags.png}" alt="bandera">
+      <h2>${capital.name.common}</h2>
+      <p><strong>Nombre oficial:</strong> ${capital.name.official}</p>
+      <p><strong>Capital:</strong> ${capital.capital?.join(", ") || "No existe"}</p>
+      <p><strong>Región:</strong> ${capital.region}</p>
+      <a href="${capital.maps.googleMaps}" target="_blank">Ver mapa</a>
+      `;
 }
