@@ -55,6 +55,8 @@ form.addEventListener("submit", function (event) {
 
   if (input) {
     obtenerPais(input);
+  } else {
+    mostrarError("El campo está vacío", "resultado-nombre");
   }
 });
 
@@ -113,6 +115,8 @@ formCapital.addEventListener("submit", function (event) {
 
   if (input) {
     obtenerCapital(input);
+  } else {
+    mostrarError("El campo está vacío", "resultado-capital");
   }
 });
 
@@ -157,6 +161,8 @@ formCodigo.addEventListener("submit", function (event) {
 
   if (input) {
     obtenerPaisCodigo(input);
+  } else {
+    mostrarError("El campo está vacío", "resultado-codigo");
   }
 });
 
