@@ -192,3 +192,45 @@ function mostrarPaisCodigo(codigo) {
       <p><strong>Zona horaria:</strong> ${codigo.timezones[0]}</p>
       `;
 }
+
+const boton = document.getElementById("btn-todos");
+
+boton.addEventListener("click", () => {
+  listarPaises();
+});
+
+async function listarPaises() {
+  const apiUrl = `https://restcountries.com/v3.1/all?fields=name,flags,capital,population`;
+
+  try {
+    const respuesta = await fetch(apiUrl);
+
+    if (!respuesta.ok) {
+      throw new Error("No se encontraron países");
+    }
+
+    const datos = await respuesta.json();
+    mostrarListaPaises(datos);
+  } catch (error) {
+    mostrarError("No se encontraron países", "resultado-todos");
+  }
+}
+
+function mostrarListaPaises(paises) {
+  const contenedor = document.getElementById("resultado-todos");
+
+  contenedor.innerHTML = "";
+
+  for (let i = 0; i < 12; i++) {
+    if (paises[i]) {
+      contenedor.innerHTML += `
+      <div class="tarjeta">
+        <img src="${paises[i].flags.png}" alt="bandera">
+        <h3>${paises[i].name.common}</h3>
+        <p><strong>Capital:</strong> ${paises[i].capital?.[0] || "No disponible"}</p>
+        <p><strong>Población:</strong> ${paises[i].population}</p>
+      </div>
+    `;
+    }
+  }
+}
