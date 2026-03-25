@@ -71,7 +71,10 @@ async function obtenerPaises(region) {
     const datos = await respuesta.json();
     mostrarPaises(datos);
   } catch (error) {
-    mostrarError("No se encontraron paises o hubo un error", "resultado-region" );
+    mostrarError(
+      "No se encontraron paises o hubo un error",
+      "resultado-region",
+    );
   }
 }
 
@@ -102,6 +105,7 @@ for (const boton of botones) {
 }
 
 const formCapital = document.getElementById("form-capital");
+
 formCapital.addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -142,5 +146,49 @@ function mostrarCapital(capital) {
       <p><strong>Capital:</strong> ${capital.capital?.join(", ") || "No existe"}</p>
       <p><strong>Región:</strong> ${capital.region}</p>
       <a href="${capital.maps.googleMaps}" target="_blank">Ver mapa</a>
+      `;
+}
+
+const formCodigo = document.getElementById("form-codigo");
+
+formCodigo.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const input = document.getElementById("input-codigo").value.trim();
+
+  if (input) {
+    obtenerPaisCodigo(input);
+  }
+});
+
+async function obtenerPaisCodigo(code) {
+  const apiUrl = `https://restcountries.com/v3.1/alpha/${code}`;
+
+  try {
+    const respuesta = await fetch(apiUrl);
+
+    if (!respuesta.ok) {
+      throw new Error("No se encontró ningún país con ese código");
+    }
+
+    const datos = await respuesta.json();
+    mostrarPaisCodigo(datos[0]);
+  } catch (error) {
+    mostrarError(
+      "No se encontró ningún país con ese código",
+      "resultado-codigo",
+    );
+  }
+}
+
+function mostrarPaisCodigo(codigo) {
+  const contenedor = document.getElementById("resultado-codigo");
+
+  contenedor.innerHTML = `
+      <img src="${codigo.flags.png}" alt="bandera">
+      <h2>${codigo.name.common}</h2>
+      <p><strong>Código cca2:</strong> ${codigo.cca2}</p>
+      <p><strong>Código cca3:</strong> ${codigo.cca3}</p>
+      <p><strong>Continente:</strong> ${codigo.continents[0]}</p>
+      <p><strong>Zona horaria:</strong> ${codigo.timezones[0]}</p>
       `;
 }
